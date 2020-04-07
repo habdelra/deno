@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { CallbackWithError } from "./_fs_common.ts";
+import { CallbackWithError } from "./_fs_common";
 
 export function close(fd: number, callback: CallbackWithError): void {
   new Promise((resolve, reject) => {

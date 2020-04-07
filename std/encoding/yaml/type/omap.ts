@@ -3,8 +3,8 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { Type } from "../type.ts";
-import { Any } from "../utils.ts";
+import { Type } from "../type";
+import { Any } from "../utils";
 
 const _hasOwnProperty = Object.prototype.hasOwnProperty;
 const _toString = Object.prototype.toString;

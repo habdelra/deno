@@ -1,4 +1,4 @@
-import { emptyDir } from "../empty_dir.ts";
+import { emptyDir } from "../empty_dir";
 
 emptyDir(Deno.args[0])
   .then(() => {

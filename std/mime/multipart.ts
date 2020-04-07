@@ -5,16 +5,16 @@ const { min, max } = Math;
 type Closer = Deno.Closer;
 type Reader = Deno.Reader;
 type Writer = Deno.Writer;
-import { equal, findIndex, findLastIndex, hasPrefix } from "../bytes/mod.ts";
-import { copyN } from "../io/ioutil.ts";
-import { MultiReader } from "../io/readers.ts";
-import { extname } from "../path/mod.ts";
-import { tempFile } from "../io/util.ts";
-import { BufReader, BufWriter } from "../io/bufio.ts";
-import { encoder } from "../encoding/utf8.ts";
-import { assertStrictEq, assert } from "../testing/asserts.ts";
-import { TextProtoReader } from "../textproto/mod.ts";
-import { hasOwnProperty } from "../util/has_own_property.ts";
+import { equal, findIndex, findLastIndex, hasPrefix } from "../bytes/mod";
+import { copyN } from "../io/ioutil";
+import { MultiReader } from "../io/readers";
+import { extname } from "../path/mod";
+import { tempFile } from "../io/util";
+import { BufReader, BufWriter } from "../io/bufio";
+import { encoder } from "../encoding/utf8";
+import { assertStrictEq, assert } from "../testing/asserts";
+import { TextProtoReader } from "../textproto/mod";
+import { hasOwnProperty } from "../util/has_own_property";
 
 /** FormFile object */
 export interface FormFile {

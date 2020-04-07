@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { grant, grantOrThrow } from "./mod.ts";
-import { assert, assertEquals } from "../testing/asserts.ts";
+import { grant, grantOrThrow } from "./mod";
+import { assert, assertEquals } from "../testing/asserts";
 
 const { test } = Deno;
 

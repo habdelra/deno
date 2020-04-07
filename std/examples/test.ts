@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { run } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
+import { assertEquals } from "../testing/asserts";
 
 /** Example of how to do basic tests */
 Deno.test(function t1(): void {
@@ -18,7 +18,7 @@ Deno.test(async function catSmoke(): Promise<void> {
       Deno.execPath(),
       "run",
       "--allow-read",
-      "examples/cat.ts",
+      "examples/cat",
       "README.md",
     ],
     stdout: "null",

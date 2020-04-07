@@ -2,8 +2,8 @@
 // Ported from https://github.com/browserify/path-browserify/
 
 const { test } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
-import * as path from "./mod.ts";
+import { assertEquals } from "../testing/asserts";
+import * as path from "./mod";
 
 test(function isAbsolute() {
   assertEquals(path.posix.isAbsolute("/home/foo"), true);

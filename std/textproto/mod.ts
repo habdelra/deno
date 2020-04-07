@@ -3,10 +3,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-import { BufReader } from "../io/bufio.ts";
-import { charCode } from "../io/util.ts";
-import { concat } from "../bytes/mod.ts";
-import { decode } from "../encoding/utf8.ts";
+import { BufReader } from "../io/bufio";
+import { charCode } from "../io/util";
+import { concat } from "../bytes/mod";
+import { decode } from "../encoding/utf8";
 
 function str(buf: Uint8Array | null | undefined): string {
   if (buf == null) {

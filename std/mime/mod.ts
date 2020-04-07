@@ -1,1 +1,1 @@
-export * from "./multipart.ts";
+export * from "./multipart";

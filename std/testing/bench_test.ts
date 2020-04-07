@@ -1,7 +1,7 @@
 const { test } = Deno;
-import { bench, runBenchmarks } from "./bench.ts";
+import { bench, runBenchmarks } from "./bench";
 
-import "./bench_example.ts";
+import "./bench_example";
 
 test({
   name: "benching",

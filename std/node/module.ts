@@ -19,18 +19,18 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-import "./global.ts";
+import "./global";
 
-import * as nodeFS from "./fs.ts";
-import * as nodeUtil from "./util.ts";
-import * as nodePath from "./path.ts";
-import * as nodeTimers from "./timers.ts";
-import * as nodeOs from "./os.ts";
-import * as nodeEvents from "./events.ts";
-import * as nodeQueryString from "./querystring.ts";
+import * as nodeFS from "./fs";
+import * as nodeUtil from "./util";
+import * as nodePath from "./path";
+import * as nodeTimers from "./timers";
+import * as nodeOs from "./os";
+import * as nodeEvents from "./events";
+import * as nodeQueryString from "./querystring";
 
-import * as path from "../path/mod.ts";
-import { assert } from "../testing/asserts.ts";
+import * as path from "../path/mod";
+import { assert } from "../testing/asserts";
 
 const CHAR_FORWARD_SLASH = "/".charCodeAt(0);
 const CHAR_BACKWARD_SLASH = "\\".charCodeAt(0);

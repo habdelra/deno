@@ -1,7 +1,7 @@
-import { SEP, SEP_PATTERN } from "./constants.ts";
-import { globrex } from "./globrex.ts";
-import { join, normalize } from "./mod.ts";
-import { assert } from "../testing/asserts.ts";
+import { SEP, SEP_PATTERN } from "./constants";
+import { globrex } from "./globrex";
+import { join, normalize } from "./mod";
+import { assert } from "../testing/asserts";
 
 export interface GlobOptions {
   extended?: boolean;
@@ -20,7 +20,7 @@ export interface GlobToRegExpOptions extends GlobOptions {
  *
  *     Looking for all the `ts` files:
  *     walkSync(".", {
- *       match: [globToRegExp("*.ts")]
+ *       match: [globToRegExp("*")]
  *     })
  *
  *     Looking for all the `.json` files in any subfolder:

@@ -1,11 +1,11 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { serve } from "../http/server.ts";
+import { serve } from "../http/server";
 import {
   acceptWebSocket,
   isWebSocketCloseEvent,
   isWebSocketPingEvent,
   WebSocket,
-} from "./mod.ts";
+} from "./mod";
 
 /** websocket echo server */
 const port = Deno.args[0] || "8080";

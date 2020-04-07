@@ -1,5 +1,5 @@
-import { parse } from "../flags/mod.ts";
-import { readStringDelim } from "../io/bufio.ts";
+import { parse } from "../flags/mod";
+import { readStringDelim } from "../io/bufio";
 const { args, exit, stdin } = Deno;
 type Reader = Deno.Reader;
 

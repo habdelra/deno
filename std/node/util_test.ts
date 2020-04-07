@@ -1,6 +1,6 @@
 const { test } = Deno;
-import { assert } from "../testing/asserts.ts";
-import * as util from "./util.ts";
+import { assert } from "../testing/asserts";
+import * as util from "./util";
 
 test({
   name: "[util] isBoolean",

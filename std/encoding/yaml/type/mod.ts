@@ -3,16 +3,16 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-export { binary } from "./binary.ts";
-export { bool } from "./bool.ts";
-export { float } from "./float.ts";
-export { int } from "./int.ts";
-export { map } from "./map.ts";
-export { merge } from "./merge.ts";
-export { nil } from "./nil.ts";
-export { omap } from "./omap.ts";
-export { pairs } from "./pairs.ts";
-export { seq } from "./seq.ts";
-export { set } from "./set.ts";
-export { str } from "./str.ts";
-export { timestamp } from "./timestamp.ts";
+export { binary } from "./binary";
+export { bool } from "./bool";
+export { float } from "./float";
+export { int } from "./int";
+export { map } from "./map";
+export { merge } from "./merge";
+export { nil } from "./nil";
+export { omap } from "./omap";
+export { pairs } from "./pairs";
+export { seq } from "./seq";
+export { set } from "./set";
+export { str } from "./str";
+export { timestamp } from "./timestamp";

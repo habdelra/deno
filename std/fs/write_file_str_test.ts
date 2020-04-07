@@ -1,6 +1,6 @@
-import { assertEquals } from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { writeFileStr, writeFileStrSync } from "./write_file_str.ts";
+import { assertEquals } from "../testing/asserts";
+import * as path from "../path/mod";
+import { writeFileStr, writeFileStrSync } from "./write_file_str";
 
 const testdataDir = path.resolve("fs", "testdata");
 

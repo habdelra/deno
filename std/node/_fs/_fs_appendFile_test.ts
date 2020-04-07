@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { test } = Deno;
-import { assertEquals, assertThrows, fail } from "../../testing/asserts.ts";
-import { appendFile, appendFileSync } from "./_fs_appendFile.ts";
+import { assertEquals, assertThrows, fail } from "../../testing/asserts";
+import { appendFile, appendFileSync } from "./_fs_appendFile";
 
 const decoder = new TextDecoder("utf-8");
 

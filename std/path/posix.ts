@@ -2,15 +2,15 @@
 // Ported from https://github.com/browserify/path-browserify/
 
 const { cwd } = Deno;
-import { FormatInputPathObject, ParsedPath } from "./interface.ts";
-import { CHAR_DOT, CHAR_FORWARD_SLASH } from "./constants.ts";
+import { FormatInputPathObject, ParsedPath } from "./interface";
+import { CHAR_DOT, CHAR_FORWARD_SLASH } from "./constants";
 
 import {
   assertPath,
   normalizeString,
   isPosixPathSeparator,
   _format,
-} from "./utils.ts";
+} from "./utils";
 
 export const sep = "/";
 export const delimiter = ":";

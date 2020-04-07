@@ -3,8 +3,8 @@
 // Copyright (c) 2018 Terkel Gjervig Nielsen
 
 const { test } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
-import { GlobrexOptions, globrex } from "./globrex.ts";
+import { assertEquals } from "../testing/asserts";
+import { GlobrexOptions, globrex } from "./globrex";
 
 const isWin = Deno.build.os === "win";
 const t = { equal: assertEquals, is: assertEquals };

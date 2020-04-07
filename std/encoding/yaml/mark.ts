@@ -3,7 +3,7 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { repeat } from "./utils.ts";
+import { repeat } from "./utils";
 
 export class Mark {
   constructor(

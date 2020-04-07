@@ -7,9 +7,9 @@ import {
   isWindows,
   joinGlobs,
   normalize,
-} from "../path/mod.ts";
-import { WalkInfo, walk, walkSync } from "./walk.ts";
-import { assert } from "../testing/asserts.ts";
+} from "../path/mod";
+import { WalkInfo, walk, walkSync } from "./walk";
+import { assert } from "../testing/asserts";
 const { cwd, stat, statSync } = Deno;
 type FileInfo = Deno.FileInfo;
 

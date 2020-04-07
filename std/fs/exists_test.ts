@@ -1,21 +1,21 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assertEquals, assertStrContains } from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { exists, existsSync } from "./exists.ts";
+import { assertEquals, assertStrContains } from "../testing/asserts";
+import * as path from "../path/mod";
+import { exists, existsSync } from "./exists";
 
 const testdataDir = path.resolve("fs", "testdata");
 
 Deno.test("[fs] existsFile", async function (): Promise<void> {
   assertEquals(
-    await exists(path.join(testdataDir, "not_exist_file.ts")),
+    await exists(path.join(testdataDir, "not_exist_file")),
     false
   );
-  assertEquals(await existsSync(path.join(testdataDir, "0.ts")), true);
+  assertEquals(await existsSync(path.join(testdataDir, "0")), true);
 });
 
 Deno.test("[fs] existsFileSync", function (): void {
-  assertEquals(existsSync(path.join(testdataDir, "not_exist_file.ts")), false);
-  assertEquals(existsSync(path.join(testdataDir, "0.ts")), true);
+  assertEquals(existsSync(path.join(testdataDir, "not_exist_file")), false);
+  assertEquals(existsSync(path.join(testdataDir, "0")), true);
 });
 
 Deno.test("[fs] existsDirectory", async function (): Promise<void> {
@@ -59,52 +59,52 @@ const scenes: Scenes[] = [
     read: false,
     async: true,
     output: "run again with the --allow-read flag",
-    file: "0.ts",
+    file: "0",
   },
   {
     read: false,
     async: false,
     output: "run again with the --allow-read flag",
-    file: "0.ts",
+    file: "0",
   },
   // 2
   {
     read: true,
     async: true,
     output: "exist",
-    file: "0.ts",
+    file: "0",
   },
   {
     read: true,
     async: false,
     output: "exist",
-    file: "0.ts",
+    file: "0",
   },
   // 3
   {
     read: false,
     async: true,
     output: "run again with the --allow-read flag",
-    file: "no_exist_file_for_test.ts",
+    file: "no_exist_file_for_test",
   },
   {
     read: false,
     async: false,
     output: "run again with the --allow-read flag",
-    file: "no_exist_file_for_test.ts",
+    file: "no_exist_file_for_test",
   },
   // 4
   {
     read: true,
     async: true,
     output: "not exist",
-    file: "no_exist_file_for_test.ts",
+    file: "no_exist_file_for_test",
   },
   {
     read: true,
     async: false,
     output: "not exist",
-    file: "no_exist_file_for_test.ts",
+    file: "no_exist_file_for_test",
   },
 ];
 
@@ -118,7 +118,7 @@ for (const s of scenes) {
       args.push("--allow-read");
     }
 
-    args.push(path.join(testdataDir, s.async ? "exists.ts" : "exists_sync.ts"));
+    args.push(path.join(testdataDir, s.async ? "exists" : "exists_sync"));
     args.push(s.file);
 
     const p = Deno.run({

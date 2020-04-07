@@ -1,4 +1,4 @@
-import { notImplemented } from "./_utils.ts";
+import { notImplemented } from "./_utils";
 
 const version = `v${Deno.version.deno}`;
 

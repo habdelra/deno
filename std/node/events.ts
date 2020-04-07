@@ -21,8 +21,8 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-import { validateIntegerRange } from "./util.ts";
-import { assert } from "../testing/asserts.ts";
+import { validateIntegerRange } from "./util";
+import { assert } from "../testing/asserts";
 
 export interface WrappedFunction extends Function {
   listener: Function;

@@ -1,12 +1,12 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assertStrictEq, assertNotEquals } from "../../testing/asserts.ts";
-import { BufReader, ReadLineResult } from "../../io/bufio.ts";
+import { assertStrictEq, assertNotEquals } from "../../testing/asserts";
+import { BufReader, ReadLineResult } from "../../io/bufio";
 
 Deno.test("[examples/echo_server]", async () => {
   const encoder = new TextEncoder();
   const decoder = new TextDecoder();
   const process = Deno.run({
-    cmd: [Deno.execPath(), "--allow-net", "echo_server.ts"],
+    cmd: [Deno.execPath(), "--allow-net", "echo_server"],
     cwd: "examples",
     stdout: "piped",
   });

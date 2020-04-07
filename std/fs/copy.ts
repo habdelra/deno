@@ -1,8 +1,8 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import * as path from "../path/mod.ts";
-import { ensureDir, ensureDirSync } from "./ensure_dir.ts";
-import { isSubdir, getFileInfoType } from "./utils.ts";
-import { assert } from "../testing/asserts.ts";
+import * as path from "../path/mod";
+import { ensureDir, ensureDirSync } from "./ensure_dir";
+import { isSubdir, getFileInfoType } from "./utils";
+import { assert } from "../testing/asserts";
 
 export interface CopyOptions {
   /**

@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 type Writer = Deno.Writer;
-import { decode, encode } from "../encoding/utf8.ts";
+import { decode, encode } from "../encoding/utf8";
 
 /** Writer utility for buffering string chunks */
 export class StringWriter implements Writer {

@@ -7,9 +7,9 @@ import {
   hasPrefix,
   repeat,
   concat,
-} from "./mod.ts";
-import { assertEquals, assertThrows, assert } from "../testing/asserts.ts";
-import { encode, decode } from "../encoding/utf8.ts";
+} from "./mod";
+import { assertEquals, assertThrows, assert } from "../testing/asserts";
+import { encode, decode } from "../encoding/utf8";
 
 Deno.test("[bytes] findIndex1", () => {
   const i = findIndex(

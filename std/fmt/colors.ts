@@ -4,7 +4,7 @@
  * on npm.
  *
  * ```
- * import { bgBlue, red, bold } from "https://deno.land/std/fmt/colors.ts";
+ * import { bgBlue, red, bold } from "https://deno.land/std/fmt/colors";
  * console.log(bgBlue(red(bold("Hello world!"))));
  * ```
  *

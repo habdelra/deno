@@ -1,4 +1,4 @@
-import { emptyDirSync } from "../empty_dir.ts";
+import { emptyDirSync } from "../empty_dir";
 
 try {
   emptyDirSync(Deno.args[0])

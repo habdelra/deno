@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assertEquals, assertThrows } from "../testing/asserts.ts";
-import * as datetime from "./mod.ts";
+import { assertEquals, assertThrows } from "../testing/asserts";
+import * as datetime from "./mod";
 
 Deno.test(function parseDateTime(): void {
   assertEquals(

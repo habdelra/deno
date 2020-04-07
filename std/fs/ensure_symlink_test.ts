@@ -4,9 +4,9 @@ import {
   assertEquals,
   assertThrows,
   assertThrowsAsync,
-} from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { ensureSymlink, ensureSymlinkSync } from "./ensure_symlink.ts";
+} from "../testing/asserts";
+import * as path from "../path/mod";
+import { ensureSymlink, ensureSymlinkSync } from "./ensure_symlink";
 
 const testdataDir = path.resolve("fs", "testdata");
 const isWindows = Deno.build.os === "win";

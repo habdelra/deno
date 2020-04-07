@@ -5,19 +5,19 @@
 // Ported from
 // https://github.com/golang/go/blob/master/src/net/http/responsewrite_test.go
 
-import { TextProtoReader } from "../textproto/mod.ts";
+import { TextProtoReader } from "../textproto/mod";
 import {
   assert,
   assertEquals,
   assertNotEOF,
   assertStrContains,
   assertThrowsAsync,
-} from "../testing/asserts.ts";
-import { Response, ServerRequest, Server, serve } from "./server.ts";
-import { BufReader, BufWriter } from "../io/bufio.ts";
-import { delay } from "../util/async.ts";
-import { encode, decode } from "../encoding/utf8.ts";
-import { mockConn } from "./mock.ts";
+} from "../testing/asserts";
+import { Response, ServerRequest, Server, serve } from "./server";
+import { BufReader, BufWriter } from "../io/bufio";
+import { delay } from "../util/async";
+import { encode, decode } from "../encoding/utf8";
+import { mockConn } from "./mock";
 
 const { Buffer, test } = Deno;
 
@@ -356,7 +356,7 @@ test({
   fn: async (): Promise<void> => {
     // Runs a simple server as another process
     const p = Deno.run({
-      cmd: [Deno.execPath(), "--allow-net", "http/testdata/simple_server.ts"],
+      cmd: [Deno.execPath(), "--allow-net", "http/testdata/simple_server"],
       stdout: "piped",
     });
 
@@ -401,7 +401,7 @@ test({
         Deno.execPath(),
         "--allow-net",
         "--allow-read",
-        "http/testdata/simple_https_server.ts",
+        "http/testdata/simple_https_server",
       ],
       stdout: "piped",
     });

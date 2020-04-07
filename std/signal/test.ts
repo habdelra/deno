@@ -1,7 +1,7 @@
 const { test } = Deno;
-import { assertEquals, assertThrows } from "../testing/asserts.ts";
-import { delay } from "../util/async.ts";
-import { signal } from "./mod.ts";
+import { assertEquals, assertThrows } from "../testing/asserts";
+import { delay } from "../util/async";
+import { signal } from "./mod";
 
 if (Deno.build.os !== "win") {
   test("signal() throws when called with empty signals", (): void => {

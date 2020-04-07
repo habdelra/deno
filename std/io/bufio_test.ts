@@ -10,7 +10,7 @@ import {
   assertEquals,
   fail,
   assertNotEOF,
-} from "../testing/asserts.ts";
+} from "../testing/asserts";
 import {
   BufReader,
   BufWriter,
@@ -18,9 +18,9 @@ import {
   PartialReadError,
   readStringDelim,
   readLines,
-} from "./bufio.ts";
-import * as iotest from "./iotest.ts";
-import { charCode, copyBytes, stringsReader } from "./util.ts";
+} from "./bufio";
+import * as iotest from "./iotest";
+import { charCode, copyBytes, stringsReader } from "./util";
 
 const encoder = new TextEncoder();
 

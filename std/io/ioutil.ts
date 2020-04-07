@@ -1,8 +1,8 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { BufReader } from "./bufio.ts";
+import { BufReader } from "./bufio";
 type Reader = Deno.Reader;
 type Writer = Deno.Writer;
-import { assert } from "../testing/asserts.ts";
+import { assert } from "../testing/asserts";
 
 /** copy N size at the most.
  *  If read size is lesser than N, then returns nread

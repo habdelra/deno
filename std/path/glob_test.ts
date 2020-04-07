@@ -1,26 +1,26 @@
 const { mkdir, test } = Deno;
-import { assert, assertEquals } from "../testing/asserts.ts";
-import { testWalk, touch, walkArray } from "../fs/walk_test.ts";
-import { globToRegExp, isGlob, joinGlobs, normalizeGlob } from "./glob.ts";
-import { SEP, join } from "./mod.ts";
+import { assert, assertEquals } from "../testing/asserts";
+import { testWalk, touch, walkArray } from "../fs/walk_test";
+import { globToRegExp, isGlob, joinGlobs, normalizeGlob } from "./glob";
+import { SEP, join } from "./mod";
 
 test({
   name: "glob: glob to regex",
   fn(): void {
     assertEquals(globToRegExp("unicorn.*") instanceof RegExp, true);
-    assertEquals(globToRegExp("unicorn.*").test("poney.ts"), false);
+    assertEquals(globToRegExp("unicorn.*").test("poney"), false);
     assertEquals(globToRegExp("unicorn.*").test("unicorn.py"), true);
-    assertEquals(globToRegExp("*.ts").test("poney.ts"), true);
-    assertEquals(globToRegExp("*.ts").test("unicorn.js"), false);
+    assertEquals(globToRegExp("*").test("poney"), true);
+    assertEquals(globToRegExp("*").test("unicorn.js"), false);
     assertEquals(
-      globToRegExp(join("unicorn", "**", "cathedral.ts")).test(
-        join("unicorn", "in", "the", "cathedral.ts")
+      globToRegExp(join("unicorn", "**", "cathedral")).test(
+        join("unicorn", "in", "the", "cathedral")
       ),
       true
     );
     assertEquals(
-      globToRegExp(join("unicorn", "**", "cathedral.ts")).test(
-        join("unicorn", "in", "the", "kitchen.ts")
+      globToRegExp(join("unicorn", "**", "cathedral")).test(
+        join("unicorn", "in", "the", "kitchen")
       ),
       false
     );
@@ -31,15 +31,15 @@ test({
       true
     );
     assertEquals(
-      globToRegExp(join("unicorn", "!(sleeping)", "bathroom.ts"), {
+      globToRegExp(join("unicorn", "!(sleeping)", "bathroom"), {
         extended: true,
-      }).test(join("unicorn", "flying", "bathroom.ts")),
+      }).test(join("unicorn", "flying", "bathroom")),
       true
     );
     assertEquals(
-      globToRegExp(join("unicorn", "(!sleeping)", "bathroom.ts"), {
+      globToRegExp(join("unicorn", "(!sleeping)", "bathroom"), {
         extended: true,
-      }).test(join("unicorn", "sleeping", "bathroom.ts")),
+      }).test(join("unicorn", "sleeping", "bathroom")),
       false
     );
   },
@@ -49,17 +49,17 @@ testWalk(
   async (d: string): Promise<void> => {
     await mkdir(d + "/a");
     await mkdir(d + "/b");
-    await touch(d + "/a/x.ts");
-    await touch(d + "/b/z.ts");
+    await touch(d + "/a/x");
+    await touch(d + "/b/z");
     await touch(d + "/b/z.js");
   },
   async function globInWalkWildcard(): Promise<void> {
     const arr = await walkArray(".", {
-      match: [globToRegExp(join("*", "*.ts"))],
+      match: [globToRegExp(join("*", "*"))],
     });
     assertEquals(arr.length, 2);
-    assertEquals(arr[0], "a/x.ts");
-    assertEquals(arr[1], "b/z.ts");
+    assertEquals(arr[0], "a/x");
+    assertEquals(arr[1], "b/z");
   }
 );
 
@@ -67,19 +67,19 @@ testWalk(
   async (d: string): Promise<void> => {
     await mkdir(d + "/a");
     await mkdir(d + "/a/yo");
-    await touch(d + "/a/yo/x.ts");
+    await touch(d + "/a/yo/x");
   },
   async function globInWalkFolderWildcard(): Promise<void> {
     const arr = await walkArray(".", {
       match: [
-        globToRegExp(join("a", "**", "*.ts"), {
+        globToRegExp(join("a", "**", "*"), {
           flags: "g",
           globstar: true,
         }),
       ],
     });
     assertEquals(arr.length, 1);
-    assertEquals(arr[0], "a/yo/x.ts");
+    assertEquals(arr[0], "a/yo/x");
   }
 );
 
@@ -89,28 +89,28 @@ testWalk(
     await mkdir(d + "/a/unicorn");
     await mkdir(d + "/a/deno");
     await mkdir(d + "/a/raptor");
-    await touch(d + "/a/raptor/x.ts");
-    await touch(d + "/a/deno/x.ts");
-    await touch(d + "/a/unicorn/x.ts");
+    await touch(d + "/a/raptor/x");
+    await touch(d + "/a/deno/x");
+    await touch(d + "/a/unicorn/x");
   },
   async function globInWalkFolderExtended(): Promise<void> {
     const arr = await walkArray(".", {
       match: [
-        globToRegExp(join("a", "+(raptor|deno)", "*.ts"), {
+        globToRegExp(join("a", "+(raptor|deno)", "*"), {
           flags: "g",
           extended: true,
         }),
       ],
     });
     assertEquals(arr.length, 2);
-    assertEquals(arr[0], "a/deno/x.ts");
-    assertEquals(arr[1], "a/raptor/x.ts");
+    assertEquals(arr[0], "a/deno/x");
+    assertEquals(arr[1], "a/raptor/x");
   }
 );
 
 testWalk(
   async (d: string): Promise<void> => {
-    await touch(d + "/x.ts");
+    await touch(d + "/x");
     await touch(d + "/x.js");
     await touch(d + "/b.js");
   },
@@ -120,7 +120,7 @@ testWalk(
     });
     assertEquals(arr.length, 2);
     assertEquals(arr[0], "x.js");
-    assertEquals(arr[1], "x.ts");
+    assertEquals(arr[1], "x");
   }
 );
 

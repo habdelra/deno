@@ -1,7 +1,7 @@
 const { cwd, chdir, makeTempDir, mkdir, open, symlink } = Deno;
 const { remove } = Deno;
-import { walk, walkSync, WalkOptions, WalkInfo } from "./walk.ts";
-import { assert, assertEquals, assertThrowsAsync } from "../testing/asserts.ts";
+import { walk, walkSync, WalkOptions, WalkInfo } from "./walk";
+import { assert, assertEquals, assertThrowsAsync } from "../testing/asserts";
 
 const isWindows = Deno.build.os == "win";
 
@@ -146,26 +146,26 @@ testWalk(
 
 testWalk(
   async (d: string): Promise<void> => {
-    await touch(d + "/x.ts");
+    await touch(d + "/x");
     await touch(d + "/y.rs");
   },
   async function ext(): Promise<void> {
     assertReady(3);
-    const arr = await walkArray(".", { exts: [".ts"] });
-    assertEquals(arr, ["x.ts"]);
+    const arr = await walkArray(".", { exts: [""] });
+    assertEquals(arr, ["x"]);
   }
 );
 
 testWalk(
   async (d: string): Promise<void> => {
-    await touch(d + "/x.ts");
+    await touch(d + "/x");
     await touch(d + "/y.rs");
     await touch(d + "/z.py");
   },
   async function extAny(): Promise<void> {
     assertReady(4);
-    const arr = await walkArray(".", { exts: [".rs", ".ts"] });
-    assertEquals(arr, ["x.ts", "y.rs"]);
+    const arr = await walkArray(".", { exts: [".rs", ""] });
+    assertEquals(arr, ["x", "y.rs"]);
   }
 );
 

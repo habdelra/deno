@@ -1,12 +1,12 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { xeval } from "../xeval.ts";
-import { stringsReader } from "../../io/util.ts";
-import { decode, encode } from "../../encoding/utf8.ts";
+import { xeval } from "../xeval";
+import { stringsReader } from "../../io/util";
+import { decode, encode } from "../../encoding/utf8";
 import {
   assertEquals,
   assertStrContains,
   assert,
-} from "../../testing/asserts.ts";
+} from "../../testing/asserts";
 const { execPath, run } = Deno;
 
 Deno.test(async function xevalSuccess(): Promise<void> {
@@ -23,7 +23,7 @@ Deno.test(async function xevalDelimiter(): Promise<void> {
   assertEquals(chunks, ["!MAD", "ADAM!"]);
 });
 
-const xevalPath = "examples/xeval.ts";
+const xevalPath = "examples/xeval";
 
 Deno.test({
   name: "xevalCliReplvar",

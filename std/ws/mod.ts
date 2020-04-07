@@ -1,17 +1,16 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { decode, encode } from "../encoding/utf8.ts";
-import { hasOwnProperty } from "../util/has_own_property.ts";
-import { BufReader, BufWriter } from "../io/bufio.ts";
-import { readLong, readShort, sliceLongToBytes } from "../io/ioutil.ts";
-import { Sha1 } from "./sha1.ts";
-import { writeResponse } from "../http/io.ts";
-import { TextProtoReader } from "../textproto/mod.ts";
-import { Deferred, deferred } from "../util/async.ts";
-import { assertNotEOF } from "../testing/asserts.ts";
-import { concat } from "../bytes/mod.ts";
-import Conn = Deno.Conn;
-import Writer = Deno.Writer;
+import { decode, encode } from "../encoding/utf8";
+import { hasOwnProperty } from "../util/has_own_property";
+import { BufReader, BufWriter } from "../io/bufio";
+import { readLong, readShort, sliceLongToBytes } from "../io/ioutil";
+import { Sha1 } from "./sha1";
+import { writeResponse } from "../http/io";
+import { TextProtoReader } from "../textproto/mod";
+import { Deferred, deferred } from "../util/async";
+import { assertNotEOF } from "../testing/asserts";
+import { concat } from "../bytes/mod";
+const { Conn, Writer } = Deno;
 
 export enum OpCode {
   Continue = 0x0,

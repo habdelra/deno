@@ -1,4 +1,4 @@
-import Dirent from "./_fs_dirent.ts";
+import Dirent from "./_fs_dirent";
 
 export default class Dir {
   private dirPath: string | Uint8Array;

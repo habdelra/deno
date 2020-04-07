@@ -5,9 +5,9 @@ import {
   assertStrContains,
   assertThrows,
   assertThrowsAsync,
-} from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { emptyDir, emptyDirSync } from "./empty_dir.ts";
+} from "../testing/asserts";
+import * as path from "../path/mod";
+import { emptyDir, emptyDirSync } from "./empty_dir";
 
 const testdataDir = path.resolve("fs", "testdata");
 
@@ -48,7 +48,7 @@ Deno.test(async function emptyDirIfItExist(): Promise<void> {
   const testNestDir = path.join(testDir, "nest");
   // create test dir
   await emptyDir(testNestDir);
-  const testDirFile = path.join(testNestDir, "test.ts");
+  const testDirFile = path.join(testNestDir, "test");
   // create test file in test dir
   await Deno.writeFile(testDirFile, new Uint8Array());
 
@@ -91,7 +91,7 @@ Deno.test(function emptyDirSyncIfItExist(): void {
   const testNestDir = path.join(testDir, "nest");
   // create test dir
   emptyDirSync(testNestDir);
-  const testDirFile = path.join(testNestDir, "test.ts");
+  const testDirFile = path.join(testNestDir, "test");
   // create test file in test dir
   Deno.writeFileSync(testDirFile, new Uint8Array());
 
@@ -214,7 +214,7 @@ for (const s of scenes) {
         }
 
         args.push(
-          path.join(testdataDir, s.async ? "empty_dir.ts" : "empty_dir_sync.ts")
+          path.join(testdataDir, s.async ? "empty_dir" : "empty_dir_sync")
         );
         args.push("testfolder");
 

@@ -3,12 +3,12 @@ import {
   assertEquals,
   assertThrows,
   assertThrowsAsync,
-} from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { move, moveSync } from "./move.ts";
-import { ensureFile, ensureFileSync } from "./ensure_file.ts";
-import { ensureDir, ensureDirSync } from "./ensure_dir.ts";
-import { exists, existsSync } from "./exists.ts";
+} from "../testing/asserts";
+import * as path from "../path/mod";
+import { move, moveSync } from "./move";
+import { ensureFile, ensureFileSync } from "./ensure_file";
+import { ensureDir, ensureDirSync } from "./ensure_dir";
+import { exists, existsSync } from "./exists";
 
 const testdataDir = path.resolve("fs", "testdata");
 

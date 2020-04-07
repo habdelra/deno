@@ -1,9 +1,9 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assert, assertEquals, assertStrContains } from "../testing/asserts.ts";
-import { BufReader } from "../io/bufio.ts";
-import { TextProtoReader } from "../textproto/mod.ts";
-import { ServerRequest } from "./server.ts";
-import { serveFile } from "./file_server.ts";
+import { assert, assertEquals, assertStrContains } from "../testing/asserts";
+import { BufReader } from "../io/bufio";
+import { TextProtoReader } from "../textproto/mod";
+import { ServerRequest } from "./server";
+import { serveFile } from "./file_server";
 const { test } = Deno;
 let fileServer: Deno.Process;
 
@@ -14,7 +14,7 @@ async function startFileServer(): Promise<void> {
       "run",
       "--allow-read",
       "--allow-net",
-      "http/file_server.ts",
+      "http/file_server",
       ".",
       "--cors",
     ],
@@ -105,7 +105,7 @@ test(async function serveWithUnorthodoxFilename(): Promise<void> {
 
 test(async function servePermissionDenied(): Promise<void> {
   const deniedServer = Deno.run({
-    cmd: [Deno.execPath(), "run", "--allow-net", "http/file_server.ts"],
+    cmd: [Deno.execPath(), "run", "--allow-net", "http/file_server"],
     stdout: "piped",
     stderr: "piped",
   });
@@ -132,7 +132,7 @@ test(async function servePermissionDenied(): Promise<void> {
 
 test(async function printHelp(): Promise<void> {
   const helpProcess = Deno.run({
-    cmd: [Deno.execPath(), "run", "http/file_server.ts", "--help"],
+    cmd: [Deno.execPath(), "run", "http/file_server", "--help"],
     stdout: "piped",
   });
   assert(helpProcess.stdout != null);

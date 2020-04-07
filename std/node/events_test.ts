@@ -4,8 +4,8 @@ import {
   assertEquals,
   fail,
   assertThrows,
-} from "../testing/asserts.ts";
-import EventEmitter, { WrappedFunction, once, on } from "./events.ts";
+} from "../testing/asserts";
+import EventEmitter, { WrappedFunction, once, on } from "./events";
 
 const shouldNeverBeEmitted: Function = () => {
   fail("Should never be called");

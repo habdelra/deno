@@ -3,9 +3,9 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { YAMLError } from "./error.ts";
-import { KindType, Type } from "./type.ts";
-import { ArrayObject, Any } from "./utils.ts";
+import { YAMLError } from "./error";
+import { KindType, Type } from "./type";
+import { ArrayObject, Any } from "./utils";
 
 function compileList(
   schema: Schema,

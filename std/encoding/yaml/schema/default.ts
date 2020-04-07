@@ -3,9 +3,9 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { Schema } from "../schema.ts";
-import { binary, merge, omap, pairs, set, timestamp } from "../type/mod.ts";
-import { core } from "./core.ts";
+import { Schema } from "../schema";
+import { binary, merge, omap, pairs, set, timestamp } from "../type/mod";
+import { core } from "./core";
 
 // JS-YAML's default schema for `safeLoad` function.
 // It is not described in the YAML specification.

@@ -1,5 +1,5 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assertStrictEq } from "../../testing/asserts.ts";
+import { assertStrictEq } from "../../testing/asserts";
 
 Deno.test("[examples/catj] print an array", async () => {
   const decoder = new TextDecoder();
@@ -77,7 +77,7 @@ Deno.test("[examples/catj] read from stdin", async () => {
 
 function catj(...files: string[]): Deno.Process {
   return Deno.run({
-    cmd: [Deno.execPath(), "--allow-read", "catj.ts", ...files],
+    cmd: [Deno.execPath(), "--allow-read", "catj", ...files],
     cwd: "examples",
     stdin: "piped",
     stdout: "piped",

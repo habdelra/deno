@@ -1,8 +1,8 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { remove, test } = Deno;
-import { assert, assertEquals } from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { copyBytes, tempFile } from "./util.ts";
+import { assert, assertEquals } from "../testing/asserts";
+import * as path from "../path/mod";
+import { copyBytes, tempFile } from "./util";
 
 test("[io/tuil] copyBytes", function (): void {
   const dst = new Uint8Array(4);

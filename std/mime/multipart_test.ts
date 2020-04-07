@@ -6,9 +6,9 @@ import {
   assertEquals,
   assertThrows,
   assertThrowsAsync,
-} from "../testing/asserts.ts";
+} from "../testing/asserts";
 const { test } = Deno;
-import * as path from "../path/mod.ts";
+import * as path from "../path/mod";
 import {
   FormFile,
   MultipartReader,
@@ -16,8 +16,8 @@ import {
   isFormFile,
   matchAfterPrefix,
   scanUntilBoundary,
-} from "./multipart.ts";
-import { StringWriter } from "../io/writers.ts";
+} from "./multipart";
+import { StringWriter } from "../io/writers";
 
 const e = new TextEncoder();
 const boundary = "--abcde";

@@ -3,8 +3,8 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { assertEquals } from "../../testing/asserts.ts";
-import { stringify } from "./stringify.ts";
+import { assertEquals } from "../../testing/asserts";
+import { stringify } from "./stringify";
 
 Deno.test({
   name: "stringified correctly",

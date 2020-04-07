@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { ServerRequest, Response } from "./server.ts";
-import { getCookies, delCookie, setCookie } from "./cookie.ts";
-import { assert, assertEquals } from "../testing/asserts.ts";
+import { ServerRequest, Response } from "./server";
+import { getCookies, delCookie, setCookie } from "./cookie";
+import { assert, assertEquals } from "../testing/asserts";
 const { test } = Deno;
 
 test({

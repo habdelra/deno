@@ -3,8 +3,8 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { Schema } from "../schema.ts";
-import { map, seq, str } from "../type/mod.ts";
+import { Schema } from "../schema";
+import { map, seq, str } from "../type/mod";
 
 // Standard YAML's Failsafe schema.
 // http://www.yaml.org/spec/1.2/spec.html#id2802346

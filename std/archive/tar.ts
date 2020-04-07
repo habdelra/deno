@@ -26,9 +26,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MultiReader } from "../io/readers.ts";
-import { BufReader } from "../io/bufio.ts";
-import { assert } from "../testing/asserts.ts";
+import { MultiReader } from "../io/readers";
+import { BufReader } from "../io/bufio";
+import { assert } from "../testing/asserts";
 
 const recordSize = 512;
 const ustar = "ustar\u000000";

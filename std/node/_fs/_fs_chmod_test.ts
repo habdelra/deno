@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { test } = Deno;
-import { fail, assert } from "../../testing/asserts.ts";
-import { chmod, chmodSync } from "./_fs_chmod.ts";
+import { fail, assert } from "../../testing/asserts";
+import { chmod, chmodSync } from "./_fs_chmod";
 
 test({
   name: "ASYNC: Permissions are changed (non-Windows)",

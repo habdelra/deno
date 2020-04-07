@@ -1,14 +1,14 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { SEP } from "./constants.ts";
+import { SEP } from "./constants";
 
 /** Determines the common path from a set of paths, using an optional separator,
  * which defaults to the OS default separator.
  *
- *       import { common } from "https://deno.land/std/path/mod.ts";
+ *       import { common } from "https://deno.land/std/path/mod";
  *       const p = common([
- *         "./deno/std/path/mod.ts",
- *         "./deno/std/fs/mod.ts",
+ *         "./deno/std/path/mod",
+ *         "./deno/std/fs/mod",
  *       ]);
  *       console.log(p); // "./deno/std/"
  *

@@ -1,3 +1,3 @@
-export * from "./cookie.ts";
-export * from "./http_status.ts";
-export * from "./server.ts";
+export * from "./cookie";
+export * from "./http_status";
+export * from "./server";

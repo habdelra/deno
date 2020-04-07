@@ -3,7 +3,7 @@ import {
   intoCallbackAPIWithIntercept,
   MaybeEmpty,
   notImplemented,
-} from "../_utils.ts";
+} from "../_utils";
 
 const { readlink: denoReadlink, readlinkSync: denoReadlinkSync } = Deno;
 

@@ -1,12 +1,12 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { Logger } from "./logger.ts";
+import { Logger } from "./logger";
 import {
   BaseHandler,
   ConsoleHandler,
   WriterHandler,
   FileHandler,
-} from "./handlers.ts";
-import { assert } from "../testing/asserts.ts";
+} from "./handlers";
+import { assert } from "../testing/asserts";
 
 export class LoggerConfig {
   level?: string;

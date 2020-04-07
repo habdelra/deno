@@ -1,8 +1,8 @@
 const { copy, test } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
-import { StringWriter } from "./writers.ts";
-import { StringReader } from "./readers.ts";
-import { copyN } from "./ioutil.ts";
+import { assertEquals } from "../testing/asserts";
+import { StringWriter } from "./writers";
+import { StringReader } from "./readers";
+import { copyN } from "./ioutil";
 
 test(async function ioStringWriter(): Promise<void> {
   const w = new StringWriter("base");

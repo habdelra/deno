@@ -1,8 +1,8 @@
 // Documentation and interface for walk were adapted from Go
 // https://golang.org/pkg/path/filepath/#Walk
 // Copyright 2009 The Go Authors. All rights reserved. BSD license.
-import { unimplemented, assert } from "../testing/asserts.ts";
-import { join } from "../path/mod.ts";
+import { unimplemented, assert } from "../testing/asserts";
+import { join } from "../path/mod";
 const { readdir, readdirSync, stat, statSync } = Deno;
 type FileInfo = Deno.FileInfo;
 

@@ -1,6 +1,6 @@
 const { test } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
-import { stringify, parse } from "./querystring.ts";
+import { assertEquals } from "../testing/asserts";
+import { stringify, parse } from "./querystring";
 
 test({
   name: "stringify",

@@ -3,15 +3,15 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-import { BufReader } from "../io/bufio.ts";
-import { TextProtoReader } from "./mod.ts";
-import { stringsReader } from "../io/util.ts";
+import { BufReader } from "../io/bufio";
+import { TextProtoReader } from "./mod";
+import { stringsReader } from "../io/util";
 import {
   assert,
   assertEquals,
   assertThrows,
   assertNotEOF,
-} from "../testing/asserts.ts";
+} from "../testing/asserts";
 const { test } = Deno;
 
 function reader(s: string): TextProtoReader {

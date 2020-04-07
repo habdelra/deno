@@ -1,18 +1,15 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { BufReader, BufWriter } from "../io/bufio.ts";
-import { assert } from "../testing/asserts.ts";
-import { deferred, Deferred, MuxAsyncIterator } from "../util/async.ts";
+import { BufReader, BufWriter } from "../io/bufio";
+import { assert } from "../testing/asserts";
+import { deferred, Deferred, MuxAsyncIterator } from "../util/async";
 import {
   bodyReader,
   chunkedBodyReader,
   emptyReader,
   writeResponse,
   readRequest,
-} from "./io.ts";
-import Listener = Deno.Listener;
-import Conn = Deno.Conn;
-import Reader = Deno.Reader;
-const { listen, listenTLS } = Deno;
+} from "./io";
+const { listen, listenTLS, Listener, Conn, Reader } = Deno;
 
 export class ServerRequest {
   url!: string;
@@ -235,7 +232,7 @@ export type HTTPOptions = Omit<Deno.ListenOptions, "transport">;
 /**
  * Create a HTTP server
  *
- *     import { serve } from "https://deno.land/std/http/server.ts";
+ *     import { serve } from "https://deno.land/std/http/server";
  *     const body = "Hello World\n";
  *     const s = serve({ port: 8000 });
  *     for await (const req of s) {

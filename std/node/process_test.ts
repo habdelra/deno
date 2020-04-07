@@ -1,6 +1,6 @@
 const { test } = Deno;
-import { assert, assertThrows, assertEquals } from "../testing/asserts.ts";
-import { process } from "./process.ts";
+import { assert, assertThrows, assertEquals } from "../testing/asserts";
+import { process } from "./process";
 
 // NOTE: Deno.execPath() (and thus process.argv) currently requires --allow-env
 // (Also Deno.env() (and process.env) requires --allow-env but it's more obvious)

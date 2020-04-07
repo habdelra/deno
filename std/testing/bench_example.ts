@@ -1,5 +1,5 @@
 // https://deno.land/std/testing/bench.ts
-import { BenchmarkTimer, bench, runIfMain } from "./bench.ts";
+import { BenchmarkTimer, bench, runIfMain } from "./bench";
 
 // Basic
 bench(function forIncrementX1e9(b: BenchmarkTimer): void {

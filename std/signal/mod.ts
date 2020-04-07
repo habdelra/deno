@@ -1,4 +1,4 @@
-import { MuxAsyncIterator } from "../util/async.ts";
+import { MuxAsyncIterator } from "../util/async";
 
 export function signal(
   ...signos: [number, ...number[]]

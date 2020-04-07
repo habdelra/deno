@@ -3,11 +3,11 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { YAMLError } from "../error.ts";
-import { Schema, SchemaDefinition, TypeMap } from "../schema.ts";
-import { State } from "../state.ts";
-import { Type } from "../type.ts";
-import { Any, ArrayObject } from "../utils.ts";
+import { YAMLError } from "../error";
+import { Schema, SchemaDefinition, TypeMap } from "../schema";
+import { State } from "../state";
+import { Type } from "../type";
+import { Any, ArrayObject } from "../utils";
 
 export interface LoaderStateOptions {
   legacy?: boolean;

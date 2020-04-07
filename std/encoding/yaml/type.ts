@@ -3,7 +3,7 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { ArrayObject, Any } from "./utils.ts";
+import { ArrayObject, Any } from "./utils";
 
 export type KindType = "sequence" | "scalar" | "mapping";
 export type StyleVariant = "lowercase" | "uppercase" | "camelcase" | "decimal";

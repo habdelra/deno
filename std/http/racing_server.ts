@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { serve, ServerRequest } from "./server.ts";
-import { delay } from "../util/async.ts";
+import { serve, ServerRequest } from "./server";
+import { delay } from "../util/async";
 
 const addr = Deno.args[1] || "127.0.0.1:4501";
 const server = serve(addr);

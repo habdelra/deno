@@ -4,7 +4,7 @@
 // https://github.com/golang/go/blob/master/LICENSE
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { assertEquals, assert } from "../testing/asserts.ts";
+import { assertEquals, assert } from "../testing/asserts";
 import {
   readMatrix,
   parse,
@@ -12,9 +12,9 @@ import {
   ERR_QUOTE,
   ERR_INVALID_DELIM,
   ERR_FIELD_COUNT,
-} from "./csv.ts";
-import { StringReader } from "../io/readers.ts";
-import { BufReader } from "../io/bufio.ts";
+} from "./csv";
+import { StringReader } from "../io/readers";
+import { BufReader } from "../io/bufio";
 
 const testCases = [
   {

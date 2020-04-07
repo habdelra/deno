@@ -4,7 +4,7 @@ import {
   notImplemented,
   intoCallbackAPIWithIntercept,
   MaybeEmpty,
-} from "../_utils.ts";
+} from "../_utils";
 
 const { readFile: denoReadFile, readFileSync: denoReadFileSync } = Deno;
 

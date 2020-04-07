@@ -1,10 +1,10 @@
-import { listenAndServe } from "../../http/server.ts";
+import { listenAndServe } from "../../http/server";
 import {
   acceptWebSocket,
   acceptable,
   WebSocket,
   isWebSocketCloseEvent,
-} from "../../ws/mod.ts";
+} from "../../ws/mod";
 
 const clients = new Map<number, WebSocket>();
 let clientId = 0;

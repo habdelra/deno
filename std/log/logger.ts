@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { LogLevel, getLevelByName, getLevelName } from "./levels.ts";
-import { BaseHandler } from "./handlers.ts";
+import { LogLevel, getLevelByName, getLevelName } from "./levels";
+import { BaseHandler } from "./handlers";
 
 export interface LogRecord {
   msg: string;

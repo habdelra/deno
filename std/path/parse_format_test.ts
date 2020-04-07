@@ -4,8 +4,8 @@
 // TODO(kt3k): fix any types in this file
 
 const { test } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
-import * as path from "./mod.ts";
+import { assertEquals } from "../testing/asserts";
+import * as path from "./mod";
 
 const winPaths = [
   // [path, root]

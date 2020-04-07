@@ -1,8 +1,8 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { test } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
-import { LogLevel, getLevelName, getLevelByName } from "./levels.ts";
-import { BaseHandler } from "./handlers.ts";
+import { assertEquals } from "../testing/asserts";
+import { LogLevel, getLevelName, getLevelByName } from "./levels";
+import { BaseHandler } from "./handlers";
 
 class TestHandler extends BaseHandler {
   public messages: string[] = [];

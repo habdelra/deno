@@ -3,8 +3,8 @@
 // https://github.com/nodeca/js-yaml/commit/665aadda42349dcae869f12040d9b10ef18d12da
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { Type } from "../type.ts";
-import { Any } from "../utils.ts";
+import { Type } from "../type";
+import { Any } from "../utils";
 
 const { Buffer } = Deno;
 

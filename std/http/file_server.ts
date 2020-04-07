@@ -7,11 +7,11 @@
 // https://github.com/indexzero/http-server/blob/master/test/http-server-test.js
 
 const { args, stat, readdir, open, exit } = Deno;
-import { posix, extname } from "../path/mod.ts";
-import { listenAndServe, ServerRequest, Response } from "./server.ts";
-import { parse } from "../flags/mod.ts";
-import { assert } from "../testing/asserts.ts";
-import { setContentLength } from "./io.ts";
+import { posix, extname } from "../path/mod";
+import { listenAndServe, ServerRequest, Response } from "./server";
+import { parse } from "../flags/mod";
+import { assert } from "../testing/asserts";
+import { setContentLength } from "./io";
 
 interface EntryInfo {
   mode: string;
@@ -47,7 +47,7 @@ const MEDIA_TYPES: Record<string, string> = {
   ".json": "application/json",
   ".map": "application/json",
   ".txt": "text/plain",
-  ".ts": "application/typescript",
+  "": "application/typescript",
   ".tsx": "application/typescript",
   ".js": "application/javascript",
   ".jsx": "application/jsx",

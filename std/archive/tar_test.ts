@@ -8,10 +8,10 @@
  * **to run this test**
  * deno run --allow-read archive/tar_test.ts
  */
-import { assertEquals } from "../testing/asserts.ts";
+import { assertEquals } from "../testing/asserts";
 
-import { resolve } from "../path/mod.ts";
-import { Tar, Untar } from "./tar.ts";
+import { resolve } from "../path/mod";
+import { Tar, Untar } from "./tar";
 
 const filePath = resolve("archive", "testdata", "example.txt");
 
@@ -27,7 +27,7 @@ Deno.test(async function createTarArchive(): Promise<void> {
   });
 
   // put a file
-  await tar.append("dir/tar.ts", { filePath });
+  await tar.append("dir/tar", { filePath });
 
   // write tar data to a buffer
   const writer = new Deno.Buffer(),

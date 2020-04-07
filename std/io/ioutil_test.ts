@@ -1,16 +1,16 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { Buffer } = Deno;
 type Reader = Deno.Reader;
-import { assertEquals } from "../testing/asserts.ts";
+import { assertEquals } from "../testing/asserts";
 import {
   copyN,
   readInt,
   readLong,
   readShort,
   sliceLongToBytes,
-} from "./ioutil.ts";
-import { BufReader } from "./bufio.ts";
-import { stringsReader } from "./util.ts";
+} from "./ioutil";
+import { BufReader } from "./bufio";
+import { stringsReader } from "./util";
 
 class BinaryReader implements Reader {
   index = 0;

@@ -5,10 +5,10 @@
 
 /* eslint-disable max-len */
 
-import { YAMLError } from "../error.ts";
-import { RepresentFn, StyleVariant, Type } from "../type.ts";
-import * as common from "../utils.ts";
-import { DumperState, DumperStateOptions } from "./dumper_state.ts";
+import { YAMLError } from "../error";
+import { RepresentFn, StyleVariant, Type } from "../type";
+import * as common from "../utils";
+import { DumperState, DumperStateOptions } from "./dumper_state";
 
 type Any = common.Any;
 type ArrayObject<T = Any> = common.ArrayObject<T>;

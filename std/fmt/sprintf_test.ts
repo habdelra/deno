@@ -1,6 +1,6 @@
-import { sprintf } from "./sprintf.ts";
+import { sprintf } from "./sprintf";
 
-import { assertEquals } from "../testing/asserts.ts";
+import { assertEquals } from "../testing/asserts";
 
 const S = sprintf;
 

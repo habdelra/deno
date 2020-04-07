@@ -3,10 +3,10 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { Schema, SchemaDefinition } from "../schema.ts";
-import { State } from "../state.ts";
-import { StyleVariant, Type } from "../type.ts";
-import { ArrayObject, Any } from "../utils.ts";
+import { Schema, SchemaDefinition } from "../schema";
+import { State } from "../state";
+import { StyleVariant, Type } from "../type";
+import { ArrayObject, Any } from "../utils";
 
 const _hasOwnProperty = Object.prototype.hasOwnProperty;
 

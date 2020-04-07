@@ -4,10 +4,10 @@
 // https://github.com/golang/go/blob/master/LICENSE
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { BufReader } from "../io/bufio.ts";
-import { TextProtoReader } from "../textproto/mod.ts";
-import { StringReader } from "../io/readers.ts";
-import { assert } from "../testing/asserts.ts";
+import { BufReader } from "../io/bufio";
+import { TextProtoReader } from "../textproto/mod";
+import { StringReader } from "../io/readers";
+import { assert } from "../testing/asserts";
 
 const INVALID_RUNE = ["\r", "\n", '"'];
 

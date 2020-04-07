@@ -1,7 +1,7 @@
 const { test } = Deno;
-import { assert, assertEquals, fail } from "../../testing/asserts.ts";
-import Dir from "./_fs_dir.ts";
-import Dirent from "./_fs_dirent.ts";
+import { assert, assertEquals, fail } from "../../testing/asserts";
+import Dir from "./_fs_dir";
+import Dirent from "./_fs_dirent";
 
 test({
   name: "Closing current directory with callback is successful",

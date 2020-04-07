@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { test } = Deno;
-import { assert, assertEquals, assertStrictEq } from "../testing/asserts.ts";
-import { collectUint8Arrays, deferred, MuxAsyncIterator } from "./async.ts";
+import { assert, assertEquals, assertStrictEq } from "../testing/asserts";
+import { collectUint8Arrays, deferred, MuxAsyncIterator } from "./async";
 
 test(function asyncDeferred(): Promise<void> {
   const d = deferred<number>();

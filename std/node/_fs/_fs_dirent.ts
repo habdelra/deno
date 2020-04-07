@@ -1,4 +1,4 @@
-import { notImplemented } from "../_utils.ts";
+import { notImplemented } from "../_utils";
 
 export default class Dirent {
   constructor(private entry: Deno.FileInfo) {}

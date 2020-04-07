@@ -13,8 +13,8 @@ import {
   fail,
   unimplemented,
   unreachable,
-} from "./asserts.ts";
-import { red, green, white, gray, bold } from "../fmt/colors.ts";
+} from "./asserts";
+import { red, green, white, gray, bold } from "../fmt/colors";
 const { test } = Deno;
 
 test(function testingEqual(): void {

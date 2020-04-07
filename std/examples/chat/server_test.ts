@@ -1,15 +1,15 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assert, assertEquals } from "../../testing/asserts.ts";
-import { TextProtoReader } from "../../textproto/mod.ts";
-import { BufReader } from "../../io/bufio.ts";
-import { connectWebSocket, WebSocket } from "../../ws/mod.ts";
-import { delay } from "../../util/async.ts";
+import { assert, assertEquals } from "../../testing/asserts";
+import { TextProtoReader } from "../../textproto/mod";
+import { BufReader } from "../../io/bufio";
+import { connectWebSocket, WebSocket } from "../../ws/mod";
+import { delay } from "../../util/async";
 
 const { test, build } = Deno;
 
 async function startServer(): Promise<Deno.Process> {
   const server = Deno.run({
-    cmd: [Deno.execPath(), "--allow-net", "--allow-read", "server.ts"],
+    cmd: [Deno.execPath(), "--allow-net", "--allow-read", "server"],
     cwd: "examples/chat",
     stdout: "piped",
   });

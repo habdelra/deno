@@ -3,11 +3,11 @@ import {
   isWebSocketCloseEvent,
   isWebSocketPingEvent,
   isWebSocketPongEvent,
-} from "../ws/mod.ts";
-import { encode } from "../encoding/utf8.ts";
-import { BufReader } from "../io/bufio.ts";
-import { TextProtoReader } from "../textproto/mod.ts";
-import { blue, green, red, yellow } from "../fmt/colors.ts";
+} from "../ws/mod";
+import { encode } from "../encoding/utf8";
+import { BufReader } from "../io/bufio";
+import { TextProtoReader } from "../textproto/mod";
+import { blue, green, red, yellow } from "../fmt/colors";
 
 const endpoint = Deno.args[0] || "ws://127.0.0.1:8080";
 /** simple websocket cli */

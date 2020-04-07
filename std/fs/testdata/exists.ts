@@ -1,4 +1,4 @@
-import { exists } from "../exists.ts";
+import { exists } from "../exists";
 
 exists(Deno.args[0])
   .then(isExist => {

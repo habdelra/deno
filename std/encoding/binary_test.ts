@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { assertEquals, assertThrowsAsync } from "../testing/asserts.ts";
+import { assertEquals, assertThrowsAsync } from "../testing/asserts";
 import {
   getNBytes,
   putVarbig,
@@ -12,7 +12,7 @@ import {
   varnum,
   writeVarbig,
   writeVarnum,
-} from "./binary.ts";
+} from "./binary";
 
 Deno.test(async function testGetNBytes(): Promise<void> {
   const data = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);

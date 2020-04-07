@@ -29,10 +29,10 @@
 
 /* eslint-disable */
 
-import "./react/react_global.d.ts";
+import "./react/react_global.d";
 
-import * as CSS from "./react/csstype.d.ts";
-import * as PropTypes from "./react/prop-types.d.ts";
+import * as CSS from "./react/csstype.d";
+import * as PropTypes from "./react/prop-types.d";
 
 type NativeAnimationEvent = AnimationEvent;
 type NativeClipboardEvent = ClipboardEvent;

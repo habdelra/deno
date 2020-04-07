@@ -1,9 +1,9 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { BufReader, BufWriter } from "../io/bufio.ts";
-import { assert, assertEquals, assertThrowsAsync } from "../testing/asserts.ts";
+import { BufReader, BufWriter } from "../io/bufio";
+import { assert, assertEquals, assertThrowsAsync } from "../testing/asserts";
 const { test } = Deno;
-import { TextProtoReader } from "../textproto/mod.ts";
-import * as bytes from "../bytes/mod.ts";
+import { TextProtoReader } from "../textproto/mod";
+import * as bytes from "../bytes/mod";
 import {
   acceptable,
   connectWebSocket,
@@ -15,13 +15,13 @@ import {
   unmask,
   writeFrame,
   createWebSocket,
-} from "./mod.ts";
-import { encode, decode } from "../encoding/utf8.ts";
+} from "./mod";
+import { encode, decode } from "../encoding/utf8";
 import Writer = Deno.Writer;
 import Reader = Deno.Reader;
 import Conn = Deno.Conn;
 import Buffer = Deno.Buffer;
-import { delay } from "../util/async.ts";
+import { delay } from "../util/async";
 
 test("[ws] read unmasked text frame", async () => {
   // unmasked single text frame with payload "Hello"

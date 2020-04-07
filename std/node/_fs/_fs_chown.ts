@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { CallbackWithError } from "./_fs_common.ts";
+import { CallbackWithError } from "./_fs_common";
 
 /**
  * TODO: Also accept 'path' parameter as a Node polyfill Buffer or URL type once these

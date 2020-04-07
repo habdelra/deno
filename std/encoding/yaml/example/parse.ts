@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { parse } from "../../yaml.ts";
+import { parse } from "../../yaml";
 
 const result = parse(`
 test: toto

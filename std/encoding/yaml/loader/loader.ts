@@ -5,11 +5,11 @@
 
 /* eslint-disable max-len */
 
-import { YAMLError } from "../error.ts";
-import { Mark } from "../mark.ts";
-import { Type } from "../type.ts";
-import * as common from "../utils.ts";
-import { LoaderState, LoaderStateOptions, ResultType } from "./loader_state.ts";
+import { YAMLError } from "../error";
+import { Mark } from "../mark";
+import { Type } from "../type";
+import * as common from "../utils";
+import { LoaderState, LoaderStateOptions, ResultType } from "./loader_state";
 
 type Any = common.Any;
 type ArrayObject<T = Any> = common.ArrayObject<T>;

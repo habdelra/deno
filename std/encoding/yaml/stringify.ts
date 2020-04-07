@@ -3,8 +3,8 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { dump } from "./dumper/dumper.ts";
-import { DumperStateOptions } from "./dumper/dumper_state.ts";
+import { dump } from "./dumper/dumper";
+import { DumperStateOptions } from "./dumper/dumper_state";
 
 export type DumpOptions = DumperStateOptions;
 

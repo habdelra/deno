@@ -7,8 +7,8 @@
 // $ deno install --allow-read catj https://deno.land/std/examples/catj.ts
 
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import { parse } from "../flags/mod.ts";
-import * as colors from "../fmt/colors.ts";
+import { parse } from "../flags/mod";
+import * as colors from "../fmt/colors";
 
 const decoder = new TextDecoder();
 

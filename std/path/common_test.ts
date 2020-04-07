@@ -1,18 +1,18 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
 const { test } = Deno;
-import { assertEquals } from "../testing/asserts.ts";
+import { assertEquals } from "../testing/asserts";
 
-import { common } from "./mod.ts";
+import { common } from "./mod";
 
 test({
   name: "path - common - basic usage",
   fn() {
     const actual = common(
       [
-        "file://deno/cli/js/deno.ts",
-        "file://deno/std/path/mod.ts",
-        "file://deno/cli/js/main.ts",
+        "file://deno/cli/js/deno",
+        "file://deno/std/path/mod",
+        "file://deno/cli/js/main",
       ],
       "/"
     );
@@ -24,7 +24,7 @@ test({
   name: "path - common - no shared",
   fn() {
     const actual = common(
-      ["file://deno/cli/js/deno.ts", "https://deno.land/std/path/mod.ts"],
+      ["file://deno/cli/js/deno", "https://deno.land/std/path/mod"],
       "/"
     );
     assertEquals(actual, "");
@@ -36,9 +36,9 @@ test({
   fn() {
     const actual = common(
       [
-        "c:\\deno\\cli\\js\\deno.ts",
-        "c:\\deno\\std\\path\\mod.ts",
-        "c:\\deno\\cli\\js\\main.ts",
+        "c:\\deno\\cli\\js\\deno",
+        "c:\\deno\\std\\path\\mod",
+        "c:\\deno\\cli\\js\\main",
       ],
       "\\"
     );

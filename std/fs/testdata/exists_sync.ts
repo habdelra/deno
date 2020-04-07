@@ -1,4 +1,4 @@
-import { existsSync } from "../exists.ts";
+import { existsSync } from "../exists";
 
 try {
   const isExist = existsSync(Deno.args[0]);

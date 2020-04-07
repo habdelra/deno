@@ -3,9 +3,9 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { Schema } from "../schema.ts";
-import { bool, float, int, nil } from "../type/mod.ts";
-import { failsafe } from "./failsafe.ts";
+import { Schema } from "../schema";
+import { bool, float, int, nil } from "../type/mod";
+import { failsafe } from "./failsafe";
 
 // Standard YAML's JSON schema.
 // http://www.yaml.org/spec/1.2/spec.html#id2803231

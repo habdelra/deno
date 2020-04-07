@@ -4,9 +4,9 @@ import {
   assertEquals,
   assertThrows,
   assertThrowsAsync,
-} from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { ensureLink, ensureLinkSync } from "./ensure_link.ts";
+} from "../testing/asserts";
+import * as path from "../path/mod";
+import { ensureLink, ensureLinkSync } from "./ensure_link";
 
 const testdataDir = path.resolve("fs", "testdata");
 

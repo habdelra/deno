@@ -1,5 +1,5 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assertStrictEq } from "../../testing/asserts.ts";
+import { assertStrictEq } from "../../testing/asserts";
 
 Deno.test("[examples/cat] print multiple files", async () => {
   const decoder = new TextDecoder();
@@ -7,7 +7,7 @@ Deno.test("[examples/cat] print multiple files", async () => {
     cmd: [
       Deno.execPath(),
       "--allow-read",
-      "cat.ts",
+      "cat",
       "testdata/cat/hello.txt",
       "testdata/cat/world.txt",
     ],

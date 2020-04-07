@@ -3,9 +3,9 @@ import {
   assertEquals,
   assertThrowsAsync,
   assertThrows,
-} from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { writeJson, writeJsonSync } from "./write_json.ts";
+} from "../testing/asserts";
+import * as path from "../path/mod";
+import { writeJson, writeJsonSync } from "./write_json";
 
 const testdataDir = path.resolve("fs", "testdata");
 

@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import * as path from "../path/mod.ts";
-import { ensureDir, ensureDirSync } from "./ensure_dir.ts";
-import { getFileInfoType } from "./utils.ts";
+import * as path from "../path/mod";
+import { ensureDir, ensureDirSync } from "./ensure_dir";
+import { getFileInfoType } from "./utils";
 const { lstat, lstatSync, writeFile, writeFileSync } = Deno;
 
 /**

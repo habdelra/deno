@@ -1,5 +1,5 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { join } from "../path/mod.ts";
+import { join } from "../path/mod";
 const { readdir, readdirSync, mkdir, mkdirSync, remove, removeSync } = Deno;
 /**
  * Ensures that a directory is empty.

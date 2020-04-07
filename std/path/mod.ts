@@ -1,10 +1,10 @@
 // Copyright the Browserify authors. MIT License.
 // Ported mostly from https://github.com/browserify/path-browserify/
 
-import * as _win32 from "./win32.ts";
-import * as _posix from "./posix.ts";
+import * as _win32 from "./win32";
+import * as _posix from "./posix";
 
-import { isWindows } from "./constants.ts";
+import { isWindows } from "./constants";
 
 const path = isWindows ? _win32 : _posix;
 
@@ -26,8 +26,8 @@ export const {
   delimiter,
 } = path;
 
-export { common } from "./common.ts";
-export { EOL, SEP, SEP_PATTERN, isWindows } from "./constants.ts";
-export * from "./interface.ts";
-export * from "./glob.ts";
-export * from "./globrex.ts";
+export { common } from "./common";
+export { EOL, SEP, SEP_PATTERN, isWindows } from "./constants";
+export * from "./interface";
+export * from "./glob";
+export * from "./globrex";

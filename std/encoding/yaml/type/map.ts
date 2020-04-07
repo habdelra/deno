@@ -3,8 +3,8 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { Type } from "../type.ts";
-import { Any } from "../utils.ts";
+import { Type } from "../type";
+import { Any } from "../utils";
 
 export const map = new Type("tag:yaml.org,2002:map", {
   construct(data): Any {

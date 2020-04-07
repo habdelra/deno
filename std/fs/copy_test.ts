@@ -4,13 +4,13 @@ import {
   assertThrows,
   assertThrowsAsync,
   assert,
-} from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { copy, copySync } from "./copy.ts";
-import { exists, existsSync } from "./exists.ts";
-import { ensureDir, ensureDirSync } from "./ensure_dir.ts";
-import { ensureFile, ensureFileSync } from "./ensure_file.ts";
-import { ensureSymlink, ensureSymlinkSync } from "./ensure_symlink.ts";
+} from "../testing/asserts";
+import * as path from "../path/mod";
+import { copy, copySync } from "./copy";
+import { exists, existsSync } from "./exists";
+import { ensureDir, ensureDirSync } from "./ensure_dir";
+import { ensureFile, ensureFileSync } from "./ensure_file";
+import { ensureSymlink, ensureSymlinkSync } from "./ensure_symlink";
 
 const testdataDir = path.resolve("fs", "testdata");
 

@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 const { test } = Deno;
-import { fail, assert } from "../../testing/asserts.ts";
-import { close, closeSync } from "./_fs_close.ts";
+import { fail, assert } from "../../testing/asserts";
+import { close, closeSync } from "./_fs_close";
 
 test({
   name: "ASYNC: File is closed",

@@ -1,6 +1,6 @@
 const { test } = Deno;
-import { assertEquals, assert, assertStrContains } from "../testing/asserts.ts";
-import { createRequire } from "./module.ts";
+import { assertEquals, assert, assertStrContains } from "../testing/asserts";
+import { createRequire } from "./module";
 
 // TS compiler would try to resolve if function named "require"
 // Thus suffixing it with require_ to fix this...

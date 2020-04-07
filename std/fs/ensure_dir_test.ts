@@ -1,8 +1,8 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assertThrows, assertThrowsAsync } from "../testing/asserts.ts";
-import * as path from "../path/mod.ts";
-import { ensureDir, ensureDirSync } from "./ensure_dir.ts";
-import { ensureFile, ensureFileSync } from "./ensure_file.ts";
+import { assertThrows, assertThrowsAsync } from "../testing/asserts";
+import * as path from "../path/mod";
+import { ensureDir, ensureDirSync } from "./ensure_dir";
+import { ensureFile, ensureFileSync } from "./ensure_file";
 
 const testdataDir = path.resolve("fs", "testdata");
 

@@ -1,10 +1,10 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assertStrictEq } from "../../testing/asserts.ts";
+import { assertStrictEq } from "../../testing/asserts";
 
 Deno.test("[examples/welcome] print a welcome message", async () => {
   const decoder = new TextDecoder();
   const process = Deno.run({
-    cmd: [Deno.execPath(), "welcome.ts"],
+    cmd: [Deno.execPath(), "welcome"],
     cwd: "examples",
     stdout: "piped",
   });

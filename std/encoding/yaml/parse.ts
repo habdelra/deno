@@ -3,8 +3,8 @@
 // Copyright 2011-2015 by Vitaly Puzrin. All rights reserved. MIT license.
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 
-import { CbFunction, load, loadAll } from "./loader/loader.ts";
-import { LoaderStateOptions } from "./loader/loader_state.ts";
+import { CbFunction, load, loadAll } from "./loader/loader";
+import { LoaderStateOptions } from "./loader/loader_state";
 
 export type ParseOptions = LoaderStateOptions;
 

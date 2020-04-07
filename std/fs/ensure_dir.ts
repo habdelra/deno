@@ -1,5 +1,5 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { getFileInfoType } from "./utils.ts";
+import { getFileInfoType } from "./utils";
 const { lstat, lstatSync, mkdir, mkdirSync } = Deno;
 
 /**

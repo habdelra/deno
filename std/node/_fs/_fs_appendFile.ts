@@ -1,6 +1,6 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { FileOptions, isFileOptions, CallbackWithError } from "./_fs_common.ts";
-import { notImplemented } from "../_utils.ts";
+import { FileOptions, isFileOptions, CallbackWithError } from "./_fs_common";
+import { notImplemented } from "../_utils";
 
 /**
  * TODO: Also accept 'data' parameter as a Node polyfill Buffer or URL type once these

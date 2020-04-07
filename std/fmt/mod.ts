@@ -1,2 +1,2 @@
-export * from "./colors.ts";
-export * from "./sprintf.ts";
+export * from "./colors";
+export * from "./sprintf";

@@ -1,7 +1,7 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
-import { assert, assertEquals } from "../../../testing/asserts.ts";
+import { assert, assertEquals } from "../../../testing/asserts";
 const { test } = Deno;
-import { generate, validate } from "../../v4.ts";
+import { generate, validate } from "../../v4";
 
 test({
   name: "[UUID] test_uuid_v4",

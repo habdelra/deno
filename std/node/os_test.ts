@@ -1,6 +1,6 @@
 const { test } = Deno;
-import { assert, assertThrows, assertEquals } from "../testing/asserts.ts";
-import * as os from "./os.ts";
+import { assert, assertThrows, assertEquals } from "../testing/asserts";
+import * as os from "./os";
 
 test({
   name: "build architecture is a string",

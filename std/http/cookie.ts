@@ -1,9 +1,9 @@
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 // Structured similarly to Go's cookie.go
 // https://github.com/golang/go/blob/master/src/net/http/cookie.go
-import { ServerRequest, Response } from "./server.ts";
-import { assert } from "../testing/asserts.ts";
-import { toIMF } from "../datetime/mod.ts";
+import { ServerRequest, Response } from "./server";
+import { assert } from "../testing/asserts";
+import { toIMF } from "../datetime/mod";
 
 export interface Cookies {
   [key: string]: string;

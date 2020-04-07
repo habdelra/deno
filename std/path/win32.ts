@@ -2,13 +2,13 @@
 // Ported from https://github.com/browserify/path-browserify/
 
 const { cwd, env } = Deno;
-import { FormatInputPathObject, ParsedPath } from "./interface.ts";
+import { FormatInputPathObject, ParsedPath } from "./interface";
 import {
   CHAR_DOT,
   CHAR_BACKWARD_SLASH,
   CHAR_COLON,
   CHAR_QUESTION_MARK,
-} from "./constants.ts";
+} from "./constants";
 
 import {
   assertPath,
@@ -16,8 +16,8 @@ import {
   isWindowsDeviceRoot,
   normalizeString,
   _format,
-} from "./utils.ts";
-import { assert } from "../testing/asserts.ts";
+} from "./utils";
+import { assert } from "../testing/asserts";
 
 export const sep = "\\";
 export const delimiter = ";";

@@ -1,18 +1,18 @@
 const { cwd, execPath, run } = Deno;
-import { decode } from "../encoding/utf8.ts";
-import { assert, assertEquals, assertStrContains } from "../testing/asserts.ts";
+import { decode } from "../encoding/utf8";
+import { assert, assertEquals, assertStrContains } from "../testing/asserts";
 import {
   isWindows,
   join,
   joinGlobs,
   normalize,
   relative,
-} from "../path/mod.ts";
+} from "../path/mod";
 import {
   ExpandGlobOptions,
   expandGlob,
   expandGlobSync,
-} from "./expand_glob.ts";
+} from "./expand_glob";
 
 async function expandGlobArray(
   globString: string,

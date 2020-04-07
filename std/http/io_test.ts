@@ -5,7 +5,7 @@ import {
   assert,
   assertNotEOF,
   assertNotEquals,
-} from "../testing/asserts.ts";
+} from "../testing/asserts";
 import {
   bodyReader,
   writeTrailers,
@@ -13,13 +13,13 @@ import {
   parseHTTPVersion,
   readRequest,
   writeResponse,
-} from "./io.ts";
-import { encode, decode } from "../encoding/utf8.ts";
-import { BufReader, ReadLineResult } from "../io/bufio.ts";
-import { chunkedBodyReader } from "./io.ts";
-import { ServerRequest, Response } from "./server.ts";
-import { StringReader } from "../io/readers.ts";
-import { mockConn } from "./mock.ts";
+} from "./io";
+import { encode, decode } from "../encoding/utf8";
+import { BufReader, ReadLineResult } from "../io/bufio";
+import { chunkedBodyReader } from "./io";
+import { ServerRequest, Response } from "./server";
+import { StringReader } from "../io/readers";
+import { mockConn } from "./mock";
 const { Buffer, test } = Deno;
 
 test("bodyReader", async () => {
